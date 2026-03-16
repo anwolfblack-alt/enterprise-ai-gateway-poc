@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  ai-gateway:
+    build: .
+    container_name: enterprise-ai-gateway
+    ports:
+      - "8000:8000"
+    environment:
+      - OPENAI_API_KEY=sk-your-key-here
+      - ANTHROPIC_API_KEY=sk-your-key-here
+    restart: unless-stopped
